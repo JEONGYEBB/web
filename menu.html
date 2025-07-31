@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>카페퐁당</title>
+    <link rel="stylesheet" type="text/css" href="style.css" href="photo.js">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> <!--폰트-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--반응형 화면(무조건 head태그안에 있어야함)-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> <!--아이콘-->
+    <style>
+        /* img:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
+        } */
+
+        
+
+        .main{
+            display: flex;
+            justify-content: center;
+			width: 990px;
+            margin: 120px auto 0 auto;
+		}
+
+        .text{
+            margin-left: 60px;
+        }
+
+
+		h1{
+			font-size: 28px;
+			font-weight: 700;
+			margin-left: 0px;
+			margin-bottom: 12px;
+			margin-top: 100px;
+			clear: left;
+            color: #333;
+		}
+
+        p{
+            font-size: 12px;
+            font-weight: 400;
+            color: #333;
+        }
+
+        .box{
+            margin-top: 60px;
+            width: 1140px; /*실제넓이1100px*/
+        }
+
+		.group{
+			float: left;
+			width: 250px;
+			text-decoration: none;
+            margin-right: 60px;
+            margin-left: 60px;
+            margin-bottom: 40px;
+		}
+
+		.group .name{
+            margin-top: 12px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #333;
+            text-align: center;
+            /*margin-bottom: 30px;*/
+        }
+
+        .img-box {
+            width: 250px;
+            height: 250px;
+            overflow: hidden;
+            border-radius: 4px;
+            position: relative;
+        }
+
+        .img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .img-box:hover img {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <!--헤더바-->
+    <div class="navigation">
+		<div class="nav-left">
+            <a class="logo" href="index.html"><img src="img/logo.png" width="140px"></a> 
+        </div>
+
+		<ul class="navbar">
+			<li><a href="menu.html" style="font-weight: 700;">MENU</a></li>
+            <li><a href="event.html">EVENT</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="help.html">HELP</a></li>
+            <li><a href="contact.html">PACKAGE</a></li>
+		</ul>
+
+        <div class="nav-right">
+		    <ul class="icon">
+			<a href="#"><i class="fa-solid fa-user"></i></a> 
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            </ul>
+        </div>
+	</div>
+
+
+    <!--메뉴-->
+    <div class="main">
+		<div class="menu">
+
+            <div class="text">
+                <h1 class="title">PONDANT'S MENU</h1>
+                <p>카테고리를 클릭하면 더 다양한 메뉴를 볼 수 있어요.</p>
+            </div>
+
+            <div class="box">
+                <a class="group" href="menu-best.html">
+                    <div class="img-box"><img src="img/tart.png" alt="Best" style="width:250px;"></div>
+                    <p class="name">Best</p>
+                </a>
+
+                <a class="group" href="menu-cake.html">
+                    <div class="img-box"><img src="img/cake.png" alt="Cake" style="width:250px;"></div>
+                    <p class="name">Cake</p>
+                </a>
+
+                <a class="group" href="menu-tart.html">
+                    <div class="img-box"><img src="img/tart.png" alt="Tart" style="width:250px;"></div>
+                    <p class="name">Tart</p>
+                </a>
+            </div>
+
+            <div class="box">
+                <a class="group" href="menu-baked.html">
+                    <div class="img-box"><img src="img/baked.png" alt="Baked Sweets" style="width:250px;"></div>
+                    <p class="name">Baked Sweets</p>
+                </a>
+
+                <a class="group" href="menu-bread.html">
+                    <div class="img-box"><img src="img/bread.png" alt="Bread" style="width:250px;"></div>
+                    <p class="name">Bread</p>
+                </a>
+
+                <a class="group" href="menu-lowsugar.html">
+                    <div class="img-box"><img src="img/lowsugar.png" alt="Low Sugar" style="width:250px;"></div>
+                    <p class="name">Low Sugar</p>
+                </a>
+            </div>
+
+            
+
+
+        </div>
+    </div>
+
+
+
+   
+</body>
+</html>

@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>카페퐁당</title>
+    <link rel="stylesheet" type="text/css" href="style.css" href="photo.js">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> <!--폰트-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--반응형 화면(무조건 head태그안에 있어야함)-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> <!--아이콘-->
+    <style>
+        @font-face {
+            font-family: "MyCustomFont1";
+            src: url("./font/210 열두시반L.ttf") format("truetype");
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        .main{
+            display: flex;
+            justify-content: center;
+			width: 1200px;
+            margin: 60px auto 0 auto;
+		}
+
+        .contents{
+            margin-bottom: 120px;
+        }
+
+        .text{
+            text-align: center;
+        }
+
+
+		h1{
+            font-family: "MyCustomFont1";
+			font-size: 30px;
+            font-weight: 300;
+            letter-spacing: 1px;
+			margin-left: 40px;
+			margin-bottom: 16px;
+			clear: left;
+            color: #333;
+		}
+
+        .text p {
+            font-size: 12px;
+            font-weight: 500;
+            color: #666;
+            margin-left: 40px;
+        }
+
+        .slider {
+            width: 1200px; /* 보여줄 너비 (이미지 3개 정도) */
+            overflow: hidden;
+            margin: 0 auto;
+        }   
+
+        @keyframes scrollSlider {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-1320px); /* 이미지 11개 × 120px = 1320px */
+        }
+        }
+
+        .box{
+            transition: transform 0.5s ease-in-out;
+            animation: scrollSlider 40s linear infinite;
+  
+            /* margin-left: 74px; */
+            margin-top: 48px;
+            width: 1200px;
+            display: flex;
+            justify-content: center;
+        }
+
+		.group{
+			float: left;
+			width: 120px;
+			text-decoration: none;
+            margin-right: 20px;
+            margin-left: 60px;
+            margin-bottom: 40px;
+		}
+
+        .img-box {
+            width: 120px;
+            height: 120px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        @keyframes tilt {
+            0%   { transform: rotate(0deg); }
+            30%  { transform: rotate(8deg); }
+            100% { transform: rotate(0deg); }
+        }
+
+        .img-box{
+            transform-origin: center bottom; /* 중심을 이미지 아래로 설정 */
+            transition: transform 1.0s ease-in-out;
+        }
+
+
+        .img-box:hover {
+            animation: tilt 0.3s ease-in-out;
+        }
+
+
+        .event h1{
+            font-family: "MyCustomFont1";
+            font-size: 28px;
+            font-weight: 300;
+            letter-spacing: 1px;
+            color: #444;
+        }
+
+        .card{
+            margin-top: 60px;
+            float: left;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: auto; 
+            width: 1220px;
+            margin-bottom: 60px;
+        }
+
+        .img-box1{
+            margin-right: 10px;
+            margin-left: 10px;
+            position: relative;
+        }
+
+        .img-box1 img {
+            display: block;
+            width: 100%;
+            height: auto;
+            z-index: 1;
+            position: relative;
+            border-radius: 12px;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); 
+            opacity: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.3s ease;
+            z-index: 2;
+            border-radius: 12px;
+        }
+
+        .overlay p{
+            font-size: 12px;
+            font-weight: 500;
+            line-height:180%;
+            color: #fff;
+            text-align: center;
+            z-index: 3;
+            background: none;
+        }
+
+        .img-box1:hover .overlay {
+            opacity: 1;
+        }
+
+        .bottom{
+            border-top: 1px solid #444444;
+            margin-top: 120px;
+        }
+
+        .site-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fdf9ec;
+            padding: 40px 80px;
+            width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .footer_left,
+        .footer_center,
+        .footer-right {
+            flex: 1;
+            text-align: center;
+            font-size: 12px;
+            line-height: 180%;
+            background: transparent;
+        }
+
+        .footer_left {
+            text-align: left;
+        }
+
+        .footer-right {
+            text-align: right;
+        }
+
+        .footer_center img {
+            width: 160px;
+            margin-top: 28px;
+        }
+
+        .fticon a {
+            margin: 0 6px;
+            font-size: 20px;
+            color: #333;
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <!--헤더바-->
+    <div class="navigation">
+		<div class="nav-left">
+            <a class="logo" href="index.html"><img src="img/logo.png" width="140px"></a> 
+        </div>
+
+		<ul class="navbar">
+			<li><a href="menu-best.html">MENU</a></li>
+            <li><a href="event.html">EVENT</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="help.html">HELP</a></li>
+            <li><a href="contact.html">PACKAGE</a></li>
+		</ul>
+
+        <div class="nav-right">
+		    <ul class="icon">
+			<a href="#"><i class="fa-solid fa-user"></i></a> 
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            </ul>
+        </div>
+	</div>
+
+    <!--배너 슬라이드-->
+    <div class="main-banner"></div>
+
+    <div class="main">
+
+		<div class="menu">
+
+            <!--신메뉴-->
+            <div class="contents">
+                <div class="text">
+                    <h1 class="title">New Menu</h1>
+                    <p>지금 제일 핫한, 따끈따끈 신상 디저트 등장!  여름 한정 특별한 디저트도 출시됐어요!</p>
+                </div>
+
+                <div class="slider">
+                    <div class="box" id="sliderBox">
+                        <a class="group" href="#">
+                            <div class="img-box"><img src="img/bread-potatobagel.png" alt="Cake" style="width: 120px; height: 120px;"></div>
+                        </a>
+
+                        <a class="group" href="#">
+                            <div class="img-box"><img src="img/bread-sesamebagel.png" alt="Cake" style="width: 120px; height: 120px;"></div>
+                        </a>
+
+                        <a class="group" href="#">
+                            <div class="img-box"><img src="img/lemonmadeleine.png" alt="Cake" style="width: 120px; height: 120px;"></div>
+                        </a>
+
+                        <a class="group" href="#">
+                            <div class="img-box"><img src="img/lemoncookie.png" alt="Cake" style="width: 120px; height: 120px;"></div>
+                        </a>
+
+                        <a class="group" href="#">
+                            <div class="img-box"><img src="img/baked-rabbit.png" alt="Cake" style="width: 120px; height: 120px;"></div>
+                        </a>
+
+                        <a class="group" href="#">
+                            <div class="img-box"><img src="img/baked-smore-lotus.png" alt="Cake" style="width: 120px; height: 120px;"></div>
+                        </a>
+
+                        <a class="group" href="#">
+                            <div class="img-box"><img src="img/tart-apricot.png" alt="Cake" style="width: 120px; height: 120px;"></div>
+                        </a>
+
+                        <a class="group" href="#">
+                            <div class="img-box"><img src="img/tart-lemon.png" alt="Cake" style="width: 120px; height: 120px;"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!--베스트메뉴-->
+            <div class="contents">
+                <div class="text">
+                    <h1 class="title">Best Menu</h1>
+                    <p>오랜 시간 꾸준히 사랑 받아온, 변함없는 퐁당 인기 메뉴들이에요</p>
+                </div>
+
+                <div class="slider">
+                    <div class="box" id="sliderBox">
+                        <a class="group" href="#">
+                            <div class="img-box"><img src="img/cake-matcha.png" alt="Cake" style="width: 120px; height: 120px;"></div>
+                        </a>
+
+                        <a class="group" href="#">
+                            <div class="img-box"><img src="img/cake-raspberry.png" alt="Cake" style="width: 120px; height: 120px;"></div>
+                        </a>
+
+                        <a class="group" href="#">
+                            <div class="img-box"><img src="img/baked-cat.png" alt="Cake" style="width: 120px; height: 120px;"></div>
+                        </a>
+
+                        <a class="group" href="#">
+                            <div class="img-box"><img src="img/baked-dog.png" alt="Cake" style="width: 120px; height: 120px;"></div>
+                        </a>
+
+                        <a class="group" href="#">
+                            <div class="img-box"><img src="img/tart-apricot.png" alt="Cake" style="width: 120px; height: 120px;"></div>
+                        </a>
+
+                        <a class="group" href="#">
+                            <div class="img-box"><img src="img/tart-coconut.png" alt="Cake" style="width: 120px; height: 120px;"></div>
+                        </a>
+
+                        <a class="group" href="#">
+                            <div class="img-box"><img src="img/baked-plainbiscotty.png" alt="Cake" style="width: 120px; height: 120px;"></div>
+                        </a>
+
+                        <a class="group" href="#">
+                            <div class="img-box"><img src="img/baked-chocobiscotty.png" alt="Cake" style="width: 120px; height: 120px;"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!--이벤트-->
+            <div class="event">
+                <div class="text">
+                    <h1>Event</h1>
+                    <p>퐁당의 달콤한 혜택! 지금 만나보세요!</p>
+                </div>
+
+                <div class="card">
+                    <div class="img-box1">
+                        <img src="img/event1.png" alt="Event" style="width: 200px;">
+                        <div class="overlay">
+                            <p class="overlay-text">♥버터 크럼블 바♥ 3종 구매시<br>1개 더 증정 이벤트</p>
+                        </div>
+                    </div>
+                    <div class="img-box1">
+                        <img src="img/event2.png" alt="Event" style="width: 200px;">
+                        <div class="overlay">
+                            <p class="overlay-text">♥크림치즈 살구 타르트♥<br>여름 한정 디저트 출시</p>
+                        </div>
+                    </div>
+                    <div class="img-box1">
+                        <img src="img/event3.png" alt="Event" style="width: 200px;">
+                        <div class="overlay">
+                            <p class="overlay-text">7월 이달의 맛<br>레몬 디저트 3종</p>
+                        </div>
+                    </div>
+                    <div class="img-box1">
+                        <img src="img/event4.png" alt="Event" style="width: 200px;">
+                        <div class="overlay">
+                            <p class="overlay-text">라즈베리 갸또<br>홀케이크 구매 시 10%</p>
+                        </div>
+                    </div>
+                    <div class="img-box1">
+                        <img src="img/event5.png" alt="Event" style="width: 200px;">
+                        <div class="overlay">
+                            <p class="overlay-text">♥감자치즈베이글♥<br>12시 이전 방문 10%</p>
+                        </div>
+                    </div>
+                    <div class="img-box1">
+                        <img src="img/event6.png" alt="Event" style="width: 200px;">
+                        <div class="overlay">
+                            <p class="overlay-text">6월 이달의 맛<br>흑임자 케이크 출시</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="bottom">
+        <footer class="site-footer">
+            <div class="footer_left">
+                <div class="ft1">
+                    <p>서울특별시 퐁당구 퐁당대로 16번길</p>
+                    <p>사업자 등록번호 : 123-45-67890</p>
+                    <p>TEL : 010-7572-1108</p>
+                </div>
+            </div>
+
+            <div class="footer_center">
+                <div class="ft2">
+                    <img src="img/fondant.png" alt="#" style="width: 128px;"><br><br>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <div class="ft3">
+                    <ul class="fticon">
+                        <a href="https://www.instagram.com/bbanggeut_?igsh=ZnBxcWhrdmZ2cXVj&utm_source=qr"><i class="fa-brands fa-square-instagram"></i></a> 
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="fa-solid fa-blog"></i></a>
+                    </ul>
+                    <p>E-MAIL : yebin616@naver.com</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+
+
+
+   
+</body>
+
+<script>
+  // 여러 개의 슬라이더(box 클래스 가진 것들)를 전부 찾아 반복 실행
+  document.querySelectorAll(".box").forEach((box) => {
+    const groupItems = box.querySelectorAll(".group");
+    const itemWidth = 120;
+    const total = groupItems.length;
+    let index = 0;
+
+    // 복제된 슬라이드 추가
+    box.innerHTML += box.innerHTML;
+
+    const maxIndex = total;
+
+    function slide() {
+      index++;
+      box.style.transition = 'transform 0.5s ease-in-out';
+      box.style.transform = `translateX(-${index * itemWidth}px)`;
+
+      if (index === maxIndex) {
+        setTimeout(() => {
+          box.style.transition = 'none';
+          box.style.transform = 'translateX(0)';
+          index = 0;
+        }, 500);
+      }
+    }
+
+    setInterval(slide, 3000);
+  });
+</script>
+
+
+
+</html>

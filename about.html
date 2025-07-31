@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>카페퐁당</title>
+    <link rel="stylesheet" type="text/css" href="style.css" href="photo.js">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> <!--폰트-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--반응형 화면(무조건 head태그안에 있어야함)-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> <!--아이콘-->
+    <style>
+        @font-face {
+            font-family: "MyCustomFont1";
+            src: url("./font/210 열두시반L.ttf") format("truetype");
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        h1{
+            font-family: "MyCustomFont1";
+            font-size: 28px;
+            font-weight: 300;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            color: #444;
+        }
+
+        h2{
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            margin-top: 36px;
+        }
+
+
+        .character-section {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            width: 990px;
+            margin: 160px auto 0px auto;
+            gap: 80px;
+        }
+
+        .character-img img {
+            width: 280px;
+            object-fit: cover;
+        }
+
+        .character-text {
+            flex: 1;
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 180%;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <!--헤더바-->
+    <div class="navigation">
+		<div class="nav-left">
+            <a class="logo" href="index.html"><img src="img/logo.png" width="140px"></a> 
+        </div>
+
+		<ul class="navbar">
+			<li><a href="menu-best.html">MENU</a></li>
+            <li><a href="event.html">EVENT</a></li>
+            <li><a href="about.html" style="font-weight: 700; color: #FFA5CD;">ABOUT</a></li>
+            <li><a href="help.html">HELP</a></li>
+            <li><a href="contact.html">PACKAGE</a></li>
+		</ul>
+
+        <div class="nav-right">
+		    <ul class="icon">
+			<a href="#"><i class="fa-solid fa-user"></i></a> 
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            </ul>
+        </div>
+	</div>
+
+    <div class="character-section">
+        <div class="character-img">
+            <img src="img/about-poster.png" alt="Character">
+        </div>
+
+        <div class="character-text">
+            <h1>About Fondant</h1>
+
+            <h2>크림처럼 녹아드는 브랜드 아이덴티티</h2>
+            <p>
+            브랜드 로고는 크림처럼 흐르는 부드러운 곡선으로 이루어져 있으며 크림에 퐁! 하고 빠지는 듯한 달콤한 몰입감을 시각적으로 표현합니다.
+            이는 브랜드가 추구하는 따듯하고 부드럽고, 사랑스러운 분위기를 시각적으로 강조하는 요소로 작용합니다.
+            </p>
+            <h2>행복 메신저, 퐁</h2>
+            <p>
+            퐁당의 캐릭터 ‘퐁’은 디저트를 좋아하고 달콤한 디저트를 보면 눈이 반짝이는 귀여운 친구입니다.  
+            일러스트는 폭신한 크림 속에 몸을 파묻고 디저트를 즐기는 퐁의 모습을 표현했습니다.  
+            퐁은 매장과 패키지 그리고 브랜드 콘텐츠 전반에 등장해 고객에게 친근함과 재미를 더해주는 존재로 활약합니다.  
+            퐁당은 디저트를 통해 사람들에게 작고 부드러운 행복을 전하고자 합니다. <br><br>
+            잠시 쉬어가고 싶은 날, 혹은 누군가를 위한 선물이 필요한 날, 퐁당에서 당신만의 달콤한 순간을 만나보세요.
+            </p>
+
+        </div>
+    </div>
+
+   
+</body>
+</html>

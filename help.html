@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>카페퐁당</title>
+    <link rel="stylesheet" type="text/css" href="style.css" href="photo.js">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> <!--폰트-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--반응형 화면(무조건 head태그안에 있어야함)-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> <!--아이콘-->
+    <style>
+        @font-face {
+            font-family: "MyCustomFont1";
+            src: url("./font/210 열두시반L.ttf") format("truetype");
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        .help-container {
+            width: 980px;
+            margin: 160px auto;
+            padding: 0;
+            text-align: left;
+            position: relative; /* 자식의 absolute 위치 기준 */
+        }
+
+        h1 {
+            font-family: "MyCustomFont1";
+            font-size: 30px;
+            font-weight: 300;
+            letter-spacing: 1px;
+            color: #444;
+            margin-bottom: 60px;
+        }
+
+        .faq {
+            margin-bottom: 28px;
+        }
+
+        .faq h3 {
+            font-size: 16px;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 6px;
+        }
+
+        .faq p {
+            font-size: 16px;
+            font-weight: 400;
+            color: #666;
+            margin: 0;
+        }
+
+        .contact-btn {
+            padding: 12px 44px;
+            font-size: 16px;
+            font-weight: 500;
+            background-color: #ffa5cd;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            position: absolute;
+            top: 420px;  
+            right: 0px;  
+        }
+
+        .contact-btn:hover {
+            background-color: #e989b8;
+        }
+    </style>
+</head>
+<body>
+    <!--헤더바-->
+    <div class="navigation">
+		<div class="nav-left">
+            <a class="logo" href="index.html"><img src="img/logo.png" width="140px"></a> 
+        </div>
+
+		<ul class="navbar">
+			<li><a href="menu-best.html">MENU</a></li>
+            <li><a href="event.html">EVENT</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="help.html" style="font-weight: 700; color: #FFA5CD;">HELP</a></li>
+            <li><a href="contact.html">PACKAGE</a></li>
+		</ul>
+
+        <div class="nav-right">
+		    <ul class="icon">
+			<a href="#"><i class="fa-solid fa-user"></i></a> 
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            </ul>
+        </div>
+	</div>
+
+
+
+    <div class="help-container">
+        <h1>자주 묻는 질문</h1>
+
+        <div class="faq">
+            <h3>Q. 매장은 어디에 있나요?</h3>
+            <p>A. 매장은 서울특별시 퐁당구 퐁당대로 16번길에 위치해 있습니다.</p>
+        </div>
+
+        <div class="faq">
+            <h3>Q. 예약이나 포장 주문은 가능한가요?</h3>
+            <p>A. 모두 가능합니다. 케이크를 제외한 모든 디저트는 3시간 전, 케이크는 최소 하루 전날 예약 부탁드립니다.</p>
+        </div>
+
+        <div class="faq">
+            <h3>Q. 디저트는 매일 같은 종류로 제공되나요?</h3>
+            <p>A. 시즌 한정 메뉴와 당일 디저트가 일부 변경될 수 있습니다. 당일 디저트는 인스타 게시글을 확인해주세요.</p>
+        </div>
+
+        <div class="faq">
+            <h3>Q. 알레르기 유발 성분이 포함된 디저트가 있나요?</h3>
+            <p>A. 제품마다 알레르기 성분이 다르므로, 직원에게 문의해주세요.</p>
+        </div>
+
+        <div class="faq">
+            <h3>Q. 반려동물 동반이 가능한가요?</h3>
+            <p>A. 야외 좌석에 한해 반려동물 동반이 가능합니다.</p>
+        </div>
+
+        <button class="contact-btn" onclick="location.href='contact.html'">문의하기</button>
+  </div>
+
+
+   
+</body>
+</html>

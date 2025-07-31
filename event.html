@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>카페퐁당</title>
+    <link rel="stylesheet" type="text/css" href="style.css" href="photo.js">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> <!--폰트-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--반응형 화면(무조건 head태그안에 있어야함)-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> <!--아이콘-->
+    <style>
+        @font-face {
+            font-family: "MyCustomFont1";
+            src: url("./font/210 열두시반L.ttf") format("truetype");
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        .event{
+            margin: 160px auto 0 auto; 
+            width: 990px;
+        }
+
+        .text{
+            width: 990px;
+            text-align: left;   
+        }
+
+        .event h1{
+            font-family: "MyCustomFont1";
+            font-size: 28px;
+            font-weight: 300;
+            letter-spacing: 1px;
+            color: #444;
+            margin-bottom: 60px;
+        }
+
+        .card{
+            margin-bottom: 40px;
+            float: left;
+            display: flex;
+            gap: 10px;
+        }
+
+        .img-box1{
+            float: left;
+            margin-right: 30px;
+            position: relative;
+        }
+
+        .img-box1 img {
+            display: block;
+            width: 100%;
+            height: auto;
+            z-index: 1;
+            position: relative;
+            border-radius: 12px;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); 
+            opacity: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.3s ease;
+            z-index: 2;
+            border-radius: 12px;
+        }
+
+        .overlay p{
+            font-size: 16px;
+            font-weight: 500;
+            line-height:180%;
+            color: #fff;
+            text-align: center;
+            z-index: 3;
+            background: none;
+        }
+
+        .img-box1:hover .overlay {
+            opacity: 1;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!--헤더바-->
+    <div class="navigation">
+		<div class="nav-left">
+            <a class="logo" href="index.html"><img src="img/logo.png" width="140px"></a> 
+        </div>
+
+		<ul class="navbar">
+			<li><a href="menu-best.html">MENU</a></li>
+            <li><a href="event.html" style="font-weight: 700; color: #FFA5CD;">EVENT</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="help.html">HELP</a></li>
+            <li><a href="contact.html">PACKAGE</a></li>
+		</ul>
+
+        <div class="nav-right">
+		    <ul class="icon">
+			<a href="#"><i class="fa-solid fa-user"></i></a> 
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            </ul>
+        </div>
+	</div>
+
+
+    <div class="event">
+        <div class="text">
+            <h1>Event</h1>
+        </div>
+
+        <div class="card">
+            <div class="img-box1">
+                <img src="img/event1.png" alt="Event" style="width: 300px;">
+                <div class="overlay">
+                    <p class="overlay-text">♥버터 크럼블 바♥ 3종 구매시<br>1개 더 증정 이벤트</p>
+                </div>
+            </div>
+            <div class="img-box1">
+                <img src="img/event2.png" alt="Event" style="width: 300px;">
+                <div class="overlay">
+                    <p class="overlay-text">♥크림치즈 살구 타르트♥<br>여름 한정 디저트 출시</p>
+                </div>
+            </div>
+            <div class="img-box1">
+                <img src="img/event3.png" alt="Event" style="width: 300px;">
+                <div class="overlay">
+                    <p class="overlay-text">7월 이달의 맛<br>레몬 디저트 3종</p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="img-box1">
+                <img src="img/event4.png" alt="Event" style="width: 300px;">
+                <div class="overlay">
+                    <p class="overlay-text">라즈베리 갸또<br>홀케이크 구매 시 10%</p>
+                </div>
+            </div>
+            <div class="img-box1">
+                <img src="img/event5.png" alt="Event" style="width: 300px;">
+                <div class="overlay">
+                    <p class="overlay-text">♥감자치즈베이글♥<br>12시 이전 방문 10%</p>
+                </div>
+            </div>
+            <div class="img-box1">
+                <img src="img/event6.png" alt="Event" style="width: 300px;">
+                <div class="overlay">
+                    <p class="overlay-text">6월 이달의 맛<br>흑임자 케이크 출시</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+   
+</body>
+</html>
+
